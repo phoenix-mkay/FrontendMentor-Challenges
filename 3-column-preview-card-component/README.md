@@ -11,12 +11,10 @@ This is a solution to the [3-column preview card component challenge on Frontend
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+
+
 
 ## Overview
 
@@ -29,14 +27,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](https://github.com/phoenix-mkay/FrontendMentor-Challenges/blob/master/3-column-preview-card-component/images/project%20screenshot.png)
 
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Source Code](https://github.com/phoenix-mkay/FrontendMentor-Challenges/tree/master/3-column-preview-card-component)
+- Live Site URL: [Live Site](https://3-column-preview-card-mkay.netlify.app/)
 
 ## My process
 
@@ -89,6 +87,6 @@ body{
 ## Author
 
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/phoenix-mkay)
-- Twitter - [@yourusername](https://www.twitter.com/Marvin00199204)
+- Frontend Mentor - [Marvin Ngugi](https://www.frontendmentor.io/profile/phoenix-mkay)
+- Twitter - [@Marvin](https://www.twitter.com/Marvin00199204)
 
