@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+*/
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  background-color: #f2f2f2;
+  width: 100%;
+  min-height: 100vh;
+  /* display flex */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h2 {
+  color: #f2f2f2;
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.75);
+  margin: 1rem 0  6rem;
+  font-size: 16px;
+  word-spacing: 4px;
+}
+
+.center-main {
+  width: 95%;
+  max-width: 1170px;
+  margin: 3rem auto;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Button Styling */
+}
+
+.center-main .main-item {
+  padding: 2.5rem 2rem;
+}
+
+.center-main .main-item .car-icon {
+  margin: 1rem 0 2rem;
+}
+
+.center-main .main-item .car-icon img {
+  display: block;
+}
+
+.center-main .main-item.orange {
+  background-color: #e38826;
+}
+
+.center-main .main-item.cyan {
+  background-color: #006970;
+}
+
+.center-main .main-item.dark-cyan {
+  background-color: #004241;
+}
+
+.center-main .btn {
+  background-color: #f2f2f2;
+  padding: 18px;
+  border: none;
+  border-radius: 25px;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 18px;
+  width: 180px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.center-main .btn:hover {
+  border: 1px solid #f2f2f2;
+  color: #f2f2f2;
+}
+
+.center-main .orange-btn {
+  color: #e38826;
+}
+
+.center-main .orange-btn:hover {
+  background-color: #e38826;
+}
+
+.center-main .cyan-btn {
+  color: #006970;
+}
+
+.center-main .cyan-btn:hover {
+  background-color: #006970;
+}
+
+.center-main .dark-cyan-btn {
+  color: #004241;
+}
+
+.center-main .dark-cyan-btn:hover {
+  background-color: #004241;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1124px) {
+  .center-main {
+    width: 89%;
+  }
+}
+
+@media (max-width: 995px) {
+  .center-main {
+    width: 93%;
+  }
+}
+
+@media (max-width: 950px) {
+  .center-main {
+    width: 97%;
+  }
+}
+
+@media (max-width: 900px) {
+  .center-main {
+    width: 80%;
+    max-width: 1170px;
+    margin: 3rem auto;
+    display: block;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

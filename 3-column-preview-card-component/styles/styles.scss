@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+// Variables
+$orangeColor:hsl(31, 77%, 52%);
+$cyan:hsl(184, 100%, 22%);
+$darkCyan:hsl(179, 100%, 13%);
+$fontFamilyBig:'Big Shoulders Display', cursive;
+$font-family:'Lexend Deca', sans-serif;
+$GrayColor:hsl(0, 0%, 95%);
+
+*{
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+*/
+@mixin  display-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin  center-container {
+    width:95%;
+    max-width: 1170px;
+    margin: 3rem auto;
+}
+body{
+    font: {
+        family: 'Lexend Deca', sans-serif;
+        size:15px;
+        weight:400;
+    }
+    background-color:hsl(0, 0%, 95%) ;
+    width: 100%;
+    min-height: 100vh;
+    /* display flex */
+    @include display-flex;
+}
+
+h2{
+    color:$GrayColor;
+    font: {
+        family: $fontFamilyBig;
+        weight: 700;
+        size: 40px;
+    }
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+p{
+    color: hsla(0, 0%, 100%, 0.75);
+    margin: 1rem 0  6rem;
+    font-size: 16px;
+    word-spacing: 4px;
+}
+
+.center-main{
+    @include center-container;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    .main-item{
+        padding: 2.5rem 2rem;
+        .car-icon{
+            margin: 1rem 0 2rem;
+            img{
+                display: block;
+            }
+        }
+    }
+    .main-item.orange{
+        background-color:  $orangeColor;
+    }
+    .main-item.cyan{
+        background-color: $cyan;
+    }
+    .main-item.dark-cyan{
+        background-color: $darkCyan;
+    }
+    /* Button Styling */
+        
+    .btn{
+        background-color: $GrayColor;
+        padding: 18px;
+        border: none{
+            radius:25px;
+        }
+        font: {
+            family: $font-family;
+            size: 18px;
+        }
+        width: 180px;
+        cursor: pointer;
+        text-align: center;
+        &:hover{
+            border: 1px solid $GrayColor;
+            color:$GrayColor;
+        }
+    }
+    .orange-btn{
+        color:$orangeColor ;
+        &:hover{
+            background-color: $orangeColor;
+        }
+    }
+    .cyan-btn{
+        color: $cyan;
+        &:hover{
+            background-color: $cyan;
+        }
+    }
+    .dark-cyan-btn{
+        color: $darkCyan;
+        &:hover{
+            background-color: $darkCyan;
+        }
+    }
+
+}
+
+
+
+/* Mobile Responsiveness */
+@media(max-width:1124px){
+   
+    .center-main{
+        width:89%;
+    } 
+    }
+    @media(max-width:995px){
+         
+    .center-main{
+        width:93%;
+    } 
+    }
+    @media(max-width:950px){
+          
+    .center-main{
+        width:97%;
+    } 
+    }
+    
+    @media(max-width:900px){
+             
+    .center-main{
+        width:80%;
+        max-width: 1170px;
+        margin: 3rem auto;
+        display: block;
+    }
+    }
