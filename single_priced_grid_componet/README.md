@@ -27,13 +27,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](https://github.com/phoenix-mkay/FrontendMentor-Challenges/blob/master/single_priced_grid_componet/images/project%20screenshot.png)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution URL](https://github.com/phoenix-mkay/FrontendMentor-Challenges/tree/master/single_priced_grid_componet)
+- Live Site URL: [live site](https://single-price-grid-component-mkay.netlify.app/)
 
 ## My process
 
