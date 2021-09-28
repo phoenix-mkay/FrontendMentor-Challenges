@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+/* Font Family 
+font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+
+
+## Colors
+
+### Primary
+
+- Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+
+### Neutral
+
+- White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+*/
+// Variables 
+$interFontFamily: 'Inter', sans-serif;
+$decaFontFamily: 'Lexend Deca', sans-serif;
+$darkBlue: hsl(233, 47%, 7%);
+$desaturatedBlue: hsl(244, 38%, 16%);
+$softViolet:hsl(277, 64%, 61%);
+$fontSize:15px;
+$white:hsl(0, 0%, 100%);
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Flexbox Properties */
+@mixin display-flex {
+    min-height: 100vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin center-stats-txt {
+    width:70%;
+    margin: 0 auto;
+}
+body{
+    @include display-flex;
+    background-color:$darkBlue ;
+    font: {
+        family:$interFontFamily;
+        size:$fontSize;
+    }
+    h2{
+        font: {
+            size:36px;
+            weight:700;
+        }
+        @include center-stats-txt;
+        margin-bottom: 2rem;
+        margin-top: 3.5rem;
+        .purpletxt{
+            color:$softViolet;
+        }
+    }
+    p{
+        color: hsla(0, 0%, 100%, 0.75);
+        @include center-stats-txt;
+        margin-bottom: 3.5rem;
+        font-family: $decaFontFamily;
+        font-size: 16px;
+    }
+}
+main.center-items{
+    width:90%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    .stats-text{
+        border-radius: 12px 0 0 12px;
+        background-color: $desaturatedBlue;
+        color: $white;
+        .stats-grid-container{
+            @include center-stats-txt;
+            margin-bottom: 3.5rem;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: space-between;
+            h3{
+                font-weight: 700;
+                font-size: 28px;
+                color:  $white;
+                margin-bottom: 5px;
+            }
+            h4{
+                text-transform: uppercase;
+                color: hsla(0, 0%, 100%, 0.6);
+                font-size: 16px;
+            }
+        }
+    }
+    .stat-bg{
+        background-color: $softViolet;
+        border-radius: 0 12px 12px 0px;
+        img{
+            mix-blend-mode: multiply;
+            width: 100%;
+            height: 100%;
+            opacity: 60%;
+            object-fit: cover;
+        }
+    }
+   
+
+}
+
+
+/* Mobile Responsivenss */
+@media(max-width:1015px){
+    @mixin center-stats-txt {
+        width:85%;
+        margin: 0 auto;
+    }
+    p,.stats-grid-container,h2{
+        @include center-stats-txt;
+    }
+}
+
+@media (max-width:935px) {
+    main.center-items{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 50% 50%;
+        width:70%;
+        margin: 3.5rem auto;
+        .stats-text{
+            border-radius: 12px 12px 0 0;
+        }
+        .stat-bg{
+            background-color: $softViolet;
+            border-radius:0 0 12px 12px;
+           
+        }
+    
+
+    }
+}
+@media(max-width:700px){
+    main.center-items{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        width:70%;
+        margin: 3.5rem auto;
+        .stats-text{
+            grid-area: 2/1/4/2;
+            border-radius: 0px 0px 12px 12px;
+        }
+        .stat-bg{
+            grid-area:1/1/2/2 ;
+            background-color: $softViolet;
+            border-radius:12px 12px 0 0;
+           
+        }
+    
+
+    }
+}
+
+@media(max-width:650px){
+    main.center-items{
+        width: 85%;
+    }
+}
+@media(max-width:550px){
+    *{
+        text-align: center;
+    }
+    h2{
+        font-size: 32px!important;
+    }
+    .stats-grid-container{
+        grid-template-columns: auto!important;
+        grid-template-rows: auto auto auto!important;
+        justify-content: center!important;
+        row-gap: 2rem;
+    }
+}

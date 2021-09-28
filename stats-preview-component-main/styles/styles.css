@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+/* Font Family 
+font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+
+
+## Colors
+
+### Primary
+
+- Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+
+### Neutral
+
+- White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Flexbox Properties */
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #090b1a;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+}
+
+body h2 {
+  font-size: 36px;
+  font-weight: 700;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 3.5rem;
+}
+
+body h2 .purpletxt {
+  color: #aa5cdb;
+}
+
+body p {
+  color: rgba(255, 255, 255, 0.75);
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 3.5rem;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 16px;
+}
+
+main.center-items {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+
+main.center-items .stats-text {
+  border-radius: 12px 0 0 12px;
+  background-color: #1b1938;
+  color: white;
+}
+
+main.center-items .stats-text .stats-grid-container {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 3.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main.center-items .stats-text .stats-grid-container h3 {
+  font-weight: 700;
+  font-size: 28px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+main.center-items .stats-text .stats-grid-container h4 {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+}
+
+main.center-items .stat-bg {
+  background-color: #aa5cdb;
+  border-radius: 0 12px 12px 0px;
+}
+
+main.center-items .stat-bg img {
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  opacity: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Mobile Responsivenss */
+@media (max-width: 1015px) {
+  p, .stats-grid-container, h2 {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 935px) {
+  main.center-items {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: 50% 50%;
+        grid-template-rows: 50% 50%;
+    width: 70%;
+    margin: 3.5rem auto;
+  }
+  main.center-items .stats-text {
+    border-radius: 12px 12px 0 0;
+  }
+  main.center-items .stat-bg {
+    background-color: #aa5cdb;
+    border-radius: 0 0 12px 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  main.center-items {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+    width: 70%;
+    margin: 3.5rem auto;
+  }
+  main.center-items .stats-text {
+
+    -ms-grid-row-span: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 2/1/4/2;
+    border-radius: 0px 0px 12px 12px;
+  }
+  main.center-items .stat-bg {
+    -ms-grid-row-span: 1;
+
+    -ms-grid-column-span: 1;
+    grid-area: 1/1/2/2;
+    background-color: #aa5cdb;
+    border-radius: 12px 12px 0 0;
+  }
+}
+
+@media (max-width: 650px) {
+  main.center-items {
+    width: 85%;
+  }
+}
+
+@media (max-width: 550px) {
+  * {
+    text-align: center;
+  }
+  h2 {
+    font-size: 32px !important;
+  }
+  .stats-grid-container {
+    -ms-grid-columns: auto !important;
+        grid-template-columns: auto !important;
+    -ms-grid-rows: auto auto auto !important;
+        grid-template-rows: auto auto auto !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    row-gap: 2rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
