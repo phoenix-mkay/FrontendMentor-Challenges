@@ -25,13 +25,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](https://github.com/phoenix-mkay/FrontendMentor-Challenges/blob/master/huddle-landing-page-single-intro/images/screenshot.png)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL here](https://github.com/phoenix-mkay/FrontendMentor-Challenges/tree/master/huddle-landing-page-single-intro)
+- Live Site URL: [Live site URL here](https://agitated-hugle-8a682e.netlify.app/)
 
 ## My process
 
