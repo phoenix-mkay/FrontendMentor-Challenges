@@ -25,14 +25,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](https://github.com/phoenix-mkay/FrontendMentor-Challenges/blob/master/huddle_landing_page/images/screenshot.png)
 
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution URL here](https://github.com/phoenix-mkay/FrontendMentor-Challenges/tree/master/huddle_landing_page)
+- Live Site URL: [live site URL here](https://sharp-hamilton-25541e.netlify.app/)
 
 ## My process
 
