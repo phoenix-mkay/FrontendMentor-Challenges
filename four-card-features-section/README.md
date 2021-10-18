@@ -25,14 +25,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](https://github.com/phoenix-mkay/FrontendMentor-Challenges/blob/master/four-card-features-section/images/screenshot.png)
 
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution URL here](https://github.com/phoenix-mkay/FrontendMentor-Challenges/tree/master/four-card-features-section)
+- Live Site URL: [live site URL here](https://competent-edison-b9197f.netlify.app/)
 
 ## My process
 
