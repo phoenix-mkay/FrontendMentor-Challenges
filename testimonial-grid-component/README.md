@@ -13,7 +13,7 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
  
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+
 
 ## Overview
 
@@ -25,12 +25,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](https://github.com/phoenix-mkay/FrontendMentor-Challenges/blob/master/testimonial-grid-component/images/screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/phoenix-mkay/FrontendMentor-Challenges/tree/master/testimonial-grid-component)
+- Live Site URL: [Add live site URL here](https://zealous-albattani-3d28ed.netlify.app/)
 
 ## My process
 
