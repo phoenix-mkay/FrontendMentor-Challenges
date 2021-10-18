@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-weight: 400;
+    background-color: hsl(257, 40%, 49%);
+    color: #ffff;
+    background-image: url(../images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+
+.main-content-div{
+    width:93vw;
+    max-width: 1170px;
+    margin: 2rem auto 0;
+}
+
+#header img,
+.main-section img{
+    display: block;
+    width: 100%;
+}
+
+#header .logo-div{
+    width:200px;
+    margin-bottom: 4rem;
+}
+.main-section{
+    display: flex;
+    justify-content: center;
+    column-gap: 4rem;
+}
+.main-section .mockupimg,
+.main-section .text-content{
+    flex: 50%;
+}
+.mockupimg img{
+    min-height: 500px;
+    object-fit: contain;
+}
+
+.text-content h1{
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.text-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    word-spacing: 7px;
+    margin-bottom: 1rem;
+}
+
+.btn{
+        width: 200px;
+        padding: 16px;
+        font-size: 18px;
+        border-radius: 40px;
+        color: hsl(257, 40%, 49%);
+        background-color: #ffff;
+        border: none;
+        box-shadow: 2px 6px 17px 2px #00000047;
+        cursor: pointer;
+}
+
+.btn:hover{
+    background-color: hsl(300, 69%, 71%);
+    color: #ffff;
+}
+
+
+#footer{
+    margin:1rem 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#footer .social-links{
+    display: flex;
+    column-gap: 2rem;
+}
+
+.social-links a{
+    color: #ffff;
+    display: inline-block;
+    width: 30px;
+}
+
+.social-links a i{
+    font-size: 16px;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 0.75rem;
+}
+
+.social-links i.fa-facebook-f{
+    font-size: 16px;
+    padding: 0.75rem 15px;
+}
+
+
+
+
+@media(max-width:1100px){
+    
+.text-content h1{
+    font-size: 32px;
+  
+}
+}
+
+@media(max-width:998px){
+.main-content-div{
+    width:95vw;
+}
+}
+@media(max-width:898px){
+
+    #header .logo-div{
+        margin-bottom: 2rem;
+    }
+.main-section{
+    width: 88%;
+    margin: 0rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.text-content h1{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.text-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    word-spacing: 7px;
+    width:85%;
+    margin:1rem auto;
+    text-align: justify;
+}
+.btn{
+    display: block;
+    width:90%;
+    margin:1rem auto;
+    max-width: 290px;
+}
+}
+@media(max-width:790px){
+    #footer{
+        justify-content: center;
+    }
+    
+}
+
+@media(max-width:500px){
+    body{
+        background-image: url(../images/bg-mobile.svg);
+    }
+}
