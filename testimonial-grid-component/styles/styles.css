@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+/*
+font-family: 'Barlow Semi Condensed', sans-serif;
+## Colors
+
+### Primary
+
+Moderate violet: hsl(263, 55%, 52%)
+Very dark grayish blue: hsl(217, 19%, 35%)
+Very dark blackish blue: hsl(219, 29%, 14%)
+White: hsl(0, 0%, 100%)
+
+### Neutral
+
+Light gray: hsl(0, 0%, 81%)
+Light grayish blue: hsl(210, 46%, 95%)
+
+Note for text colors:
+
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+
+## Typography
+
+### Body Copy
+
+- Font size: 13px
+
+*/
+/* Variables */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ecf2f8;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: white;
+}
+
+body img {
+  border-radius: 50%;
+}
+
+body .client-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 1.75rem;
+          column-gap: 1.75rem;
+}
+
+body .client-details .name {
+  color: white;
+}
+
+body .client-details .verified {
+  color: white;
+  opacity: 50%;
+}
+
+.testimonial-grid-container {
+  width: 90%;
+  color: #cfcfcf;
+  margin: 2rem auto;
+}
+
+.testimonial-grid-container .grid-item {
+  margin-bottom: 1.5rem;
+  padding: 2.5rem 3rem;
+  border-radius: 15px;
+}
+
+.testimonial-grid-container .grid-item p {
+  margin: 1rem 0;
+}
+
+.testimonial-grid-container .grid-item p.darker-text {
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+}
+
+.testimonial-grid-container .grid-item p.lighter-text {
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+  opacity: 70%;
+}
+
+.testimonial-grid-container .testimonial-grid-item-1 {
+  background-color: #7541c8;
+  position: relative;
+}
+
+.testimonial-grid-container .testimonial-grid-item-1 img {
+  border: 2px solid purple;
+}
+
+.testimonial-grid-container .testimonial-grid-item-1 p.darker-text {
+  z-index: 92;
+}
+
+.testimonial-grid-container .testimonial-grid-item-1::after {
+  content: url(../images/bg-pattern-quotation.svg);
+  position: absolute;
+  top: 37px;
+  height: 30px;
+  width: 30px !important;
+  right: 115px;
+  opacity: 40%;
+}
+
+.testimonial-grid-container .testimonial-grid-item-2 {
+  background-color: #48556a;
+}
+
+.testimonial-grid-container .testimonial-grid-item-3 {
+  background-color: white;
+}
+
+.testimonial-grid-container .testimonial-grid-item-3 p.darker-text {
+  color: #48556a;
+}
+
+.testimonial-grid-container .testimonial-grid-item-3 p.lighter-text {
+  color: #48556a;
+  opacity: 70%;
+}
+
+.testimonial-grid-container .testimonial-grid-item-3 .name, .testimonial-grid-container .testimonial-grid-item-3 .verified {
+  color: #48556a;
+}
+
+.testimonial-grid-container .testimonial-grid-item-3 .verified {
+  opacity: 50%;
+}
+
+.testimonial-grid-container .testimonial-grid-item-4 {
+  background-color: #19212e;
+}
+
+.testimonial-grid-container .testimonial-grid-item-4 img {
+  border: 2px solid purple;
+}
+
+.testimonial-grid-container .testimonial-grid-item-5 {
+  background-color: white;
+}
+
+.testimonial-grid-container .testimonial-grid-item-5 p.darker-text {
+  color: #48556a;
+}
+
+.testimonial-grid-container .testimonial-grid-item-5 p.lighter-text {
+  color: #48556a;
+  opacity: 70%;
+}
+
+.testimonial-grid-container .testimonial-grid-item-5 .name, .testimonial-grid-container .testimonial-grid-item-5 .verified {
+  color: #48556a;
+}
+
+.testimonial-grid-container .testimonial-grid-item-5 .verified {
+  opacity: 50%;
+}
+
+@media (min-width: 950px) {
+  .testimonial-grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+    row-gap: 1rem;
+    width: 90%;
+  }
+  .testimonial-grid-container .testimonial-grid-item-5 {
+    grid-area: 3/1/4/3;
+  }
+}
+
+@media (min-width: 1135px) {
+  .testimonial-grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+    row-gap: 1rem;
+    width: 90%;
+    margin-top: 6rem !important;
+    margin-bottom: 6rem !important;
+  }
+  .testimonial-grid-container .grid-item p.lighter-text {
+    font-size: 17px;
+  }
+  .testimonial-grid-container .grid-item p.darker-text {
+    font-size: 22px;
+  }
+  .testimonial-grid-container .testimonial-grid-item-1 {
+    grid-area: 1/1/3/2;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .testimonial-grid-container .testimonial-grid-item-3 {
+
+    grid-area: 1/2/2/4;
+  }
+  .testimonial-grid-container .testimonial-grid-item-5 {
+    -ms-grid-column-span: 2;
+    grid-area: 3/2/4/4;
+  }
+}
+
+@media (min-width: 1335px) {
+  .testimonial-grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+    row-gap: 1rem;
+    width: 90%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .testimonial-grid-container .grid-item {
+    padding: 2.5rem 1.5rem;
+  }
+  .testimonial-grid-container .grid-item p.darker-text {
+    font-size: 22px;
+  }
+  .testimonial-grid-container .testimonial-grid-item-1 {
+    grid-area: 1/1/2/3;
+  }
+  .testimonial-grid-container .testimonial-grid-item-1 p.lighter-text {
+    font-size: 17px;
+  }
+  .testimonial-grid-container .testimonial-grid-item-1::after {
+    content: url(../images/bg-pattern-quotation.svg);
+    position: absolute;
+    top: 37px;
+    height: 30px;
+    width: 30px !important;
+    right: 160px;
+    opacity: 40%;
+  }
+  .testimonial-grid-container .testimonial-grid-item-2 {
+    grid-area: 1/3/2/4;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+  }
+  .testimonial-grid-container .testimonial-grid-item-2 p.lighter-text {
+    line-height: 1.5;
+    font-size: 18px;
+  }
+  .testimonial-grid-container .testimonial-grid-item-3 {
+   
+    grid-area: 2/1/3/2;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+  }
+  .testimonial-grid-container .testimonial-grid-item-3 p.lighter-text {
+    line-height: 1.5;
+    font-size: 18px;
+  }
+  .testimonial-grid-container .testimonial-grid-item-4 {
+    grid-area: 2/2/3/4;
+  }
+  .testimonial-grid-container .testimonial-grid-item-4 p.lighter-text {
+    font-size: 17px;
+  }
+  .testimonial-grid-container .testimonial-grid-item-5 {
+    grid-area: 1/4/3/5;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+  }
+  .testimonial-grid-container .testimonial-grid-item-5 p.lighter-text {
+    line-height: 1.5;
+    font-size: 18px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
