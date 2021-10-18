@@ -22,13 +22,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](https://github.com/phoenix-mkay/FrontendMentor-Challenges/blob/master/order-summary-component/images/screenshot.png)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/phoenix-mkay/FrontendMentor-Challenges/tree/master/order-summary-component)
+- Live Site URL: [Add live site URL here](https://peaceful-swartz-67f3f5.netlify.app/)
 
 ## My process
 
