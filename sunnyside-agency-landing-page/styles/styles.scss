@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+/* 
+FONT
+font-family: 'Barlow', sans-serif;
+font-family: 'Fraunces', serif;
+Colors
+- Very dark desaturated blue: hsl(212, 27%, 19%)
+- Very dark grayish blue: hsl(213, 9%, 39%)
+- Dark grayish blue: hsl(232, 10%, 55%)
+- Grayish blue: hsl(210, 4%, 67%)
+- White: hsl(0, 0%, 100%)
+- Soft red: hsl(7, 99%, 70%)
+- Yellow: hsl(51, 100%, 49%)
+- Dark desaturated cyan (graphic design text): hsl(167, 40%, 24%)
+- Dark blue (photography text): hsl(198, 62%, 26%)
+- Dark moderate cyan (footer): hsl(168, 34%, 41%)
+*/
+$darkDesaturatedBlue: hsl(212, 27%, 19%) ;
+$verydarkGrayishBlue: hsl(213, 9%, 39%);
+$darkGrayishBlue :  hsl(232, 10%, 55%);
+$grayishBlue:hsl(210, 4%, 67%);
+$white:hsl(0, 0%, 100%);
+$softRed:hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$desaturatedCyan: hsl(167, 40%, 24%);
+$darkBlue: hsl(198, 62%, 26%);
+$moderateCyan: hsl(168, 34%, 41%);
+$BarlowFamily:'Barlow', sans-serif;
+$FrauncesFamily:'Fraunces', serif;
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+@mixin backgroundProperties {
+    width: 100%;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+body{
+    width:100%;
+    overflow-x:hidden;
+    font: {
+        size:18px;
+        family:$BarlowFamily;
+        weight:600;
+    }
+    button{
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        background-color: transparent;
+        color: $white;
+        &:focus{
+            outline: none;
+        }
+    }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        text-decoration: none;
+    }
+    h1,.testimonials h2,.testimonial-name{
+        font: {
+            size: 28px;
+            family:$FrauncesFamily;
+            weight:700;
+        }
+        margin: 1rem 0;
+        text-transform: uppercase;
+    }
+}
+// Add background image
+.image-header{
+    background-image: url("../images/mobile/image-header.jpg");
+    //include background properties
+    @include backgroundProperties;
+    min-height: 100vh;
+    width:100%;
+    position: relative;
+    color: $white;
+}
+
+// Header 
+#header{
+    padding: 10px 5px;
+    // Images div
+    .header-images-div{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin:0 auto;
+        // Logo
+        .logo img{
+            width:150px;
+            height: auto;
+            object-fit: cover;
+        }
+        // Toggle btn
+        .button_box{
+            align-self: flex-start;
+            .toggle-btn{
+                font: {
+                    weight:900;
+                    size:20px;
+                }
+            }
+        }
+
+    }
+    // Navbar
+    #nav-bar{
+        display: none;
+        background-color: $white;
+        text-align: center;
+        padding:1rem 0;
+        position: relative;
+        width: 90%;
+        margin:2rem auto;
+        &::before{
+            content: "";
+            display: inline-block;
+           // padding: 5px;
+            position: absolute;
+            top: -20px;
+            right:0px;
+           // background-color: $white;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 0px solid transparent;
+            border-bottom: 20px solid $white;
+      
+         
+        }
+        .navbar-link a{
+            display: inline-block;
+            padding:12px 0;
+            color: $darkGrayishBlue;
+        }
+        .navbar-link.contact a{
+            background-color: $yellow;
+            padding: 12px 18px;
+            text-align: center;
+            border-radius: 25px;
+            color: #222;
+            text-transform: uppercase;
+            margin: 10px 0;
+            font: {
+                family:$FrauncesFamily;
+                weight:700;
+                size:16px;
+            }
+            transition: all 0.3s linear;
+            &:hover{
+                background-color: #3ebfff;
+                color: $white;
+            }
+        }
+    }
+
+}
+//Main heading
+.main-heading{
+    width:90%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   .arrow-down{
+       img{
+           height: 60px;
+       }
+   }
+}
+
+// Main grid-container
+.grid-container{
+    .grid-item{
+        min-height: 50vh;
+        h2{
+            text-align: center;
+            margin: 10px 0;
+        }
+    }
+    .grid-item1,.grid-item3,.graphic-design,.photography{
+        @include backgroundProperties;
+    }
+    .graphic-design,.photography{
+        min-height: 80vh;
+        display: flex;
+        align-items: flex-end;
+        text-align: center;
+        p{
+            margin:15px 0;
+            padding:4px 8px;
+        }
+        
+    }
+   .grid-item1{
+       background-image: url("../images/mobile/image-transform.jpg");
+   }
+   .grid-item3{
+       background-image: url("../images/mobile/image-stand-out.jpg");
+   }
+   .graphic-design{
+       background-image: url("../images/mobile/image-graphic-design.jpg");
+       color:$desaturatedCyan;
+
+   }
+   .photography{
+       background-image: url("../images/mobile/image-photography.jpg");
+       color: $darkBlue;
+   }
+   // Just text
+   .just-text{
+       padding:1rem 0;
+       div{
+           width: 87%;
+           margin: 0 auto;
+           h2,.lrnmore-link a{
+               font: {
+                   family:$FrauncesFamily;
+                   weight:700;
+               }
+               color: $darkDesaturatedBlue;
+           }
+           p{
+               color: $darkGrayishBlue;
+               line-height: 1.3;
+               text-align: center;
+               margin:10px 0;
+           }
+           .lrnmore-link{
+               text-transform: uppercase;
+            a{
+                display: block;
+                text-align: center;
+                position: relative;
+            }
+            margin:10px 0;
+            }
+            .lrnmore-link.yellow:hover{
+              a{
+                  border: 1px solid $yellow;
+              }
+               
+            }
+            .lrnmore-link.red:hover{
+                border-bottom: 5px solid $softRed;
+            }
+       }
+   }
+     
+}
+
+// Testimonials
+.testimonials{
+    padding:0.75rem 0;
+    //Heading
+    h2{
+        text-align: center;
+        font-size: 24px!important;
+        color:$grayishBlue;
+    }
+    .testimonials-grid-container{
+        width:90%;
+        margin: 32px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .testimonial-item{
+            width:87%;
+            text-align: center;
+            // Client image
+            .client-img{
+                img{
+                    display: block;
+                    width:90px;
+                    height:auto;
+                    border-radius: 50%;
+                    margin: 1rem auto;
+                }
+            }
+            // Client Comment
+            .testimonial-comment{
+                color:$darkGrayishBlue;
+                margin:16px 0;
+            }
+            .testimonial-name{
+                text-transform: capitalize;
+                color: $darkDesaturatedBlue;
+            }
+            .occupation{
+                color: $grayishBlue;
+            }
+        }
+    }
+   
+}
+
+// gallery
+.gallery{
+    width:100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap:0;
+    .photo1,.photo2,.photo3,.photo4{
+        @include backgroundProperties();
+        min-height: 30vh;
+    }
+    .photo1{
+        background-image: url("../images/mobile/image-gallery-milkbottles.jpg");
+    }
+    .photo2{
+        background-image: url("../images/mobile/image-gallery-orange.jpg");
+    }
+    .photo3{
+        background-image: url("../images/mobile/image-gallery-cone.jpg");
+    }
+    .photo4{
+        background-image: url("../images/mobile/image-gallery-sugar-cubes.jpg");
+    }
+}
+
+// Footer
+#footer{
+    background-color: #91d3c5;
+    display: flex;
+    justify-content: center;
+    padding:3rem 0;
+    .center-footer{
+        width:90%;
+        color: $moderateCyan;
+        .logo{
+            display: flex;
+            justify-content: center;
+            img{
+              filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+            }
+        }
+        .footer-links{
+            display: flex;
+            justify-content: space-between;
+            margin:18px 0;
+            .navbar-link a{
+                color:$moderateCyan;
+            }
+        }
+        .footer-social-media-links{
+            display: flex;
+            justify-content: center;
+            column-gap: 1.5rem;
+            margin:0 0 10px;
+        }
+    }
+}
+
+@media(min-width:700px){
+    // Main grid-container
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+     
+}
+// gallery
+.gallery{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:0;
+}
+// Testimonials
+.testimonials{
+    .testimonials-grid-container{
+        width:90%;
+        margin: 32px auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 10px;
+        .testimonial-item{
+            width:100%;
+            .testimonial-name{
+              font-size: 20px;
+            }
+        }
+    }
+   
+}
+}
+
+@media(min-width:750px){
+    // Header 
+#header{
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    // Images div
+    .header-images-div{
+
+        width: auto;
+        margin:0; 
+        .logo img{
+            width:140px;
+            height: 70px;
+            object-fit: contain;
+        }
+        //  Hide Toggle btn
+        .button_box{
+            align-self: flex-start;
+            display: none;
+        }
+
+    }
+    // Navbar
+    #nav-bar{
+        display: block!important;
+        background-color: transparent;
+        text-align: center;
+        align-self: flex-start;
+        padding: 0;
+        position: relative;
+        width: 70%;
+        margin:0;
+        &::before{
+            content: "";
+            display: none;
+         
+        }
+        .navbar-links{
+            display: flex;
+            justify-content: flex-end;
+            column-gap: 2.5rem;
+        }
+        .navbar-link a{
+            display: inline-block;
+            padding:20px 0;
+
+            color: $white;
+        }
+        .navbar-link.contact a{
+            background-color: $white;
+            padding: 20px 30px;
+            text-align: center;
+            border-radius: 25px;
+            color: #222;
+            font-size: 15px!important;
+            text-transform: uppercase;
+            margin: 0;
+            transition: all 0.3s linear;
+            &:hover{
+                background-color: #91d3c5;
+                color: $white;
+            }
+        }
+    }
+
+}
+}
+@media (min-width:800px) {
+    // Change gallery photos
+    // gallery
+    .gallery{
+        .photo1,.photo2,.photo3,.photo4{
+            min-height: 50vh;
+        }
+        .photo1{
+            background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
+        }
+        .photo2{
+            background-image: url("../images/desktop/image-gallery-orange.jpg");
+        }
+        .photo3{
+            background-image: url("../images/desktop/image-gallery-cone.jpg");
+        }
+        .photo4{
+            background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
+        }
+    
+    }
+    // Change background of header
+    // Add background image
+    .image-header{
+        background-image: url("../images/desktop/image-header.jpg");
+    }
+    // Change grid-cotnainer layout and background photos
+    // Main grid-container
+.grid-container{
+    .grid-item{
+        min-height: 70vh;
+    }
+    .graphic-design,.photography{
+        min-height: 70vh;
+    }
+   .grid-item1{
+       grid-area:1/2/2/3;
+       background-image: url("../images/desktop/image-transform.jpg");
+   }
+   .grid-item3{
+       background-image: url("../images/desktop/image-stand-out.jpg");
+   }
+   .graphic-design{
+       background-image: url("../images/desktop/image-graphic-design.jpg");
+
+   }
+   .photography{
+       background-image: url("../images/desktop/image-photography.jpg");
+   }
+    // Just text
+    .just-text{
+        padding:0;
+        display: flex;
+        align-items:center;
+    }
+  
+     
+}
+}
+@media(min-width:960px){
+    // Footer
+#footer{
+    .center-footer{
+        width:90%;
+       max-width: 800px;
+    }
+}
+body h1{
+    font: {
+        size:60px;
+        weight:900;
+    }
+}
+// change size of arrow
+.main-heading{
+    .arrow-down{
+        transform: translate(0,100px);
+        img{
+            height: 90px;
+            width: 45px;
+        }
+    }
+}
+}
