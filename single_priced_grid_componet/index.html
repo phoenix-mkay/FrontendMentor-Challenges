@@ -6,26 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
     <title>Frontend Mentor | Single Price Grid Component</title>
     <link rel="stylesheet" href="./css/styles.css">
+       <!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 <body>
     <!-- Main Section -->
     <main class="main-content">
         <section class="top-section">
-            <h2>  Join our community</h2>
+            <h2>{{heading}}</h2>
             <p class="yellow-txt">
-                30-day, hassle-free money back guarantee
+                {{yellowTxt}}
             </p>
             <p class="light-gray-txt">
-                Gain access to our full library of tutorials along with expert code reviews. 
-                Perfect for any developers who are serious about honing their skills.
+               {{grayTxt}}
             </p>
         </section>
         <!-- Bottom Section -->
         <section class="bottom-section darker-section">
-            <h3> Monthly Subscription</h3>
+            <h3>{{heading}}</h3>
             <p class="big-txt">&dollar;29  <sup class="small-txt">per month</sup></p>
             <p>Full access for less than &dollar;1 a day</p>
             <button class="yellow-btn">
@@ -33,17 +33,15 @@
             </button>
         </section>
         <section class="bottom-section lighter-section">
-            <h3>Why Us</h3>
+            <h3>{{heading}}</h3>
             <ul class="features">
-                <li>Tutorials by industry experts</li>
-                <li> Peer &amp; expert code review</li>
-                <li> Coding exercises</li>
-                <li> Access to our GitHub repos</li>
-                <li> Community forum</li>
-                <li>Flashcard decks</li>
-                <li> New videos every week</li>
+               <li v-for="item in items" :key="item.message">
+                   {{item.message}}
+               </li>
             </ul>
         </section>
     </main>
+    <!-- JavaScript file-->
+    <script src="./app.js"></script>
 </body>
 </html>
